@@ -38,4 +38,15 @@ public class ConfigLoader {
             e.printStackTrace();
         }
     }
+
+    public void save(BotConfig botConfig) {
+        try {
+            FileWriter fileWriter = new FileWriter(configLocation);
+            Yaml yaml = new Yaml();
+            yaml.dump(botConfig, fileWriter);
+            fileWriter.close();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
 }
