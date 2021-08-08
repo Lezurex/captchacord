@@ -1,3 +1,10 @@
+/*
+ * Copyright (c) 2021 Lenny Angst. All rights reserved.
+ * For more information about the license read the LICENSE file at the root of this repo.
+ * Written for Project: captchacord
+ * Last modified: 8/8/21, 5:16 PM
+ */
+
 package com.lezurex.captchacord.config;
 
 import net.dv8tion.jda.api.entities.Guild;

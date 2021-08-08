@@ -1,3 +1,10 @@
+/*
+ * Copyright (c) 2021 Lenny Angst. All rights reserved.
+ * For more information about the license read the LICENSE file at the root of this repo.
+ * Written for Project: captchacord
+ * Last modified: 8/8/21, 5:30 PM
+ */
+
 package com.lezurex.captchacord;
 
 import com.lezurex.captchacord.config.BotConfig;
@@ -17,7 +24,7 @@ import javax.security.auth.login.LoginException;
 public class App {
 
     public static void main(String[] args) {
-
+        // Method empty because the instance is instantiated in assigning of instance static variable
     }
 
     @Getter

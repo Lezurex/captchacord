@@ -1,3 +1,10 @@
+/*
+ * Copyright (c) 2021 Lenny Angst. All rights reserved.
+ * For more information about the license read the LICENSE file at the root of this repo.
+ * Written for Project: captchacord
+ * Last modified: 8/8/21, 5:21 PM
+ */
+
 package com.lezurex.captchacord.listeners;
 
 import com.lezurex.captchacord.App;
