@@ -8,12 +8,10 @@
 package com.lezurex.captchacord.commands;
 
 import com.lezurex.captchacord.commands.setup.SetupSession;
-import lombok.extern.log4j.Log4j2;
 import net.dv8tion.jda.api.entities.Member;
 import net.dv8tion.jda.api.entities.Message;
 import net.dv8tion.jda.api.entities.TextChannel;
 
-@Log4j2
 public class SetupCommand implements ServerCommand {
 
     @Override

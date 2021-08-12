@@ -35,9 +35,10 @@ public class App {
 
     private final BotConfig botConfig;
     private JDA jda;
-    private CommandManager commandManager;
+    private final CommandManager commandManager;
 
     public App() {
+        log.info("Hello darling my old frend");
         ConfigLoader configLoader = new ConfigLoader();
         this.botConfig = configLoader.load();
         this.commandManager = new CommandManager();

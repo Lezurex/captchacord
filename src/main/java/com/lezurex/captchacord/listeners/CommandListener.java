@@ -8,14 +8,12 @@
 package com.lezurex.captchacord.listeners;
 
 import com.lezurex.captchacord.App;
-import lombok.extern.log4j.Log4j2;
 import net.dv8tion.jda.api.events.message.guild.GuildMessageReceivedEvent;
 import net.dv8tion.jda.api.hooks.ListenerAdapter;
 import org.jetbrains.annotations.NotNull;
 
 import java.util.concurrent.TimeUnit;
 
-@Log4j2
 public class CommandListener extends ListenerAdapter {
 
     @Override
