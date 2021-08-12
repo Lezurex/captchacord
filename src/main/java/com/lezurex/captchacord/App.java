@@ -15,7 +15,7 @@ import com.lezurex.captchacord.listeners.CommandListener;
 import com.lezurex.captchacord.listeners.LoadListener;
 import com.lezurex.captchacord.listeners.ServerManagingListener;
 import lombok.Getter;
-import lombok.extern.log4j.Log4j2;
+import lombok.extern.slf4j.Slf4j;
 import net.dv8tion.jda.api.JDA;
 import net.dv8tion.jda.api.JDABuilder;
 import net.dv8tion.jda.api.entities.Activity;
@@ -26,7 +26,7 @@ import org.apache.logging.log4j.core.config.Configurator;
 import javax.security.auth.login.LoginException;
 
 @Getter
-@Log4j2
+@Slf4j
 public class App {
 
     public static void main(String[] args) {
@@ -44,7 +44,7 @@ public class App {
                 if (level != null)
                     Configurator.setRootLevel(level);
                 else {
-                    log.printf(Level.ERROR, "'%s' is not a valid log level!", value);
+                    log.error(String.format("'%s' is not a valid log level!%n", value));
                     System.exit(1);
                 }
             }
@@ -85,7 +85,7 @@ public class App {
         try {
             this.jda = builder.build();
         } catch (LoginException e) {
-            log.fatal("Failed to connect to discord! Please check your bot token in config.yml!");
+            log.error("Failed to connect to discord! Please check your bot token in config.yml!");
             System.exit(1);
         }
     }
