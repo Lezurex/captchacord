@@ -16,13 +16,15 @@ public class ServerConfig {
     public String guildId;
     public String waitingChannel;
     public String verifiedRole;
+    public String prefix;
 
     public ServerConfig() {}
 
-    public ServerConfig(String guildId, String waitingChannel, String verifiedRole) {
+    public ServerConfig(String guildId, String waitingChannel, String verifiedRole, String prefix) {
         this.guildId = guildId;
         this.waitingChannel = waitingChannel;
         this.verifiedRole = verifiedRole;
+        this.prefix = prefix;
     }
 
     public ServerConfig(Guild guild) {

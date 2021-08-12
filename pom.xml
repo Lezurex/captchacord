@@ -60,6 +60,11 @@
             <version>1.18.20</version>
             <scope>provided</scope>
         </dependency>
+        <dependency>
+            <groupId>org.shredzone.commons</groupId>
+            <artifactId>commons-captcha</artifactId>
+            <version>1.0</version>
+        </dependency>
     </dependencies>
 
     <build>

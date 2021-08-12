@@ -34,7 +34,7 @@ public class LoadListener extends ListenerAdapter {
         List<String> savedGuildIds = app.getBotConfig().servers.stream().map(serverConfig -> serverConfig.guildId).collect(Collectors.toList());
         guilds.stream().map(ISnowflake::getId).forEach(guildId -> {
             if (!savedGuildIds.contains(guildId)) {
-                app.getBotConfig().servers.add(new ServerConfig(guildId, null, null));
+                app.getBotConfig().servers.add(new ServerConfig(guildId, null, null, "cc."));
             }
         });
 

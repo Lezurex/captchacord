@@ -7,8 +7,11 @@
 
 package com.lezurex.captchacord;
 
+import com.lezurex.captchacord.commands.CommandManager;
+import com.lezurex.captchacord.commands.setup.SetupMessageListener;
 import com.lezurex.captchacord.config.BotConfig;
 import com.lezurex.captchacord.config.ConfigLoader;
+import com.lezurex.captchacord.listeners.CommandListener;
 import com.lezurex.captchacord.listeners.LoadListener;
 import com.lezurex.captchacord.listeners.ServerManagingListener;
 import lombok.Getter;
@@ -32,10 +35,12 @@ public class App {
 
     private final BotConfig botConfig;
     private JDA jda;
+    private CommandManager commandManager;
 
     public App() {
         ConfigLoader configLoader = new ConfigLoader();
         this.botConfig = configLoader.load();
+        this.commandManager = new CommandManager();
 
         createBot();
         registerListeners();
@@ -56,5 +61,7 @@ public class App {
     private void registerListeners() {
         this.jda.addEventListener(new LoadListener());
         this.jda.addEventListener(new ServerManagingListener());
+        this.jda.addEventListener(new CommandListener());
+        this.jda.addEventListener(new SetupMessageListener());
     }
 }
